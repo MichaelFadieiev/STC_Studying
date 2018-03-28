@@ -14,3 +14,27 @@ p {
 h2::before {
     counter-increment: section;
     content: "Section " counter(section) ": ";
+}
+
+.tooltip {
+    position: relative;
+}
+.tooltip .tooltipData {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    margin-left: 0px;
+
+}
+
+.tooltip .tooltipData img {
+    width: 400px;
+}
+
+.tooltip:hover .tooltipData {
+    visibility: visible;
+    opacity: 1;
+}

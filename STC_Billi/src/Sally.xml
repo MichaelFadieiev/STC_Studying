@@ -12,6 +12,32 @@
         <rule>Understandable</rule>
     </requirements>
 
+    <devModels>
+        <devModel>
+            <name>Waterfall</name>
+            <description>Simple, but useful approach. One step only after finishing of previous step.</description>
+            <imgFile></imgFile>
+        </devModel>
+        <devModel>
+            <name>Agile</name>
+            <description>Not so simple, but more agile approach. Iteration in the form of sprints with several
+                tasks in each and 4 basic types of regular meetings.</description>
+            <imgFile></imgFile>
+        </devModel>
+        <devModel>
+            <name>V-model</name>
+            <description>"V" for reliability! Every stage of the development has its own
+                testing procedure.</description>
+            <imgFile></imgFile>
+        </devModel>
+        <devModel>
+            <name>Spiral</name>
+            <description>Pretty complicated, but main advantage is the prototype evaluation after
+                every iteration.</description>
+            <imgFile></imgFile>
+        </devModel>
+    </devModels>
+
     <food>
         <name>Belgian Waffles</name>
         <price>$5.95</price>
