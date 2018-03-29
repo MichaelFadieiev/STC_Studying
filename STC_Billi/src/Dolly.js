@@ -2,21 +2,22 @@ function devModelsSally() {
     var xhttp_a = new XMLHttpRequest();
     var devModelsList="";
     xhttp_a.onreadystatechange = function() {
-    //document.getElementById("reqRules").innerHTML = "<li>Oh... function is on!</li>";
         if (this.readyState == 4 && this.status == 200) {
-            //document.getElementById("reqRules").innerHTML = "<li>And even if cafe is working!</li>";
             var j;
             var x_a = this.responseXML.getElementsByTagName("devModels")[0].getElementsByTagName("devModel");
             for ( j = 0; j< x_a.length; j++) {
-                //document.getElementById("reqRules").innerHTML = "<li>" + x[i].childNodes[0].nodeValue + "</li>";
-                devModelsList += "<li>" + x_a[j].getElementsByTagName("name")[0].childNodes[0].nodeValue + "</li>";
-                //document.getElementById("reqRules").innerHTML = reqRuleList;
+                devModelsList += "<li class=\"tooltip\">" +
+                                 x_a[j].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                                 "<table class=\"tooltipData\"><tr><td width=400px>" +
+                                 x_a[j].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+                                 "</td><td><img src=\"" +
+                                 x_a[j].getElementsByTagName("imgFile")[0].childNodes[0].nodeValue +
+                                 "\" alt=\"Oops! Missing image;)\"></td></tr></table></li>";
             }
         }
     document.getElementById("devModels").innerHTML = devModelsList;
     }
     xhttp_a.open("GET", "Sally.xml", true);
-    //document.getElementById("reqRules").innerHTML = reqRuleList;
     xhttp_a.send();
 }
 

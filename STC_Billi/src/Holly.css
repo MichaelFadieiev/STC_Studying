@@ -1,20 +1,35 @@
 body {
-    background-color: lightblue;
+    background-color: #ADD8E6; /*lightblue*/
     counter-reset: section;
 }
 h1 {
-    color: white;
+    color: #FFFFFF; /*white*/
     text-align: center;
-}
-p {
     font-family: verdana;
-    font-size: 20px;
+    font-size: 40px;
 }
-
+h2 {
+    color: #000000; /*black*/
+    font-family: verdana;
+    font-size: 30px;
+}
 h2::before {
     counter-increment: section;
     content: "Section " counter(section) ": ";
 }
+p {
+    color: #000000; /*black*/
+    font-family: verdana;
+    font-size: 20px;
+}
+ul {
+    color: #000000; /*black*/
+    font-family: verdana;
+    font-size: 20px;
+
+}
+
+
 
 .tooltip {
     position: relative;
@@ -22,14 +37,16 @@ h2::before {
 .tooltip .tooltipData {
     visibility: hidden;
     opacity: 0;
+    background-color: #FFFFF0;
     transition: opacity 1s;
     position: absolute;
     z-index: 1;
     left: 0%;
     margin-left: 0px;
-
 }
-
+table.tooltipData, .tooltipData td {
+    border: 1px solid #000000;
+}
 .tooltip .tooltipData img {
     width: 400px;
 }
